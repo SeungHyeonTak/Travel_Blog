@@ -1,0 +1,155 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    {% block title %}
+        <title>Camping a Travel Blog | SeungHyeon</title>
+    {% endblock %}
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Camping Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+    {% block extra_script %}
+
+    {% endblock %}
+</head>
+
+<body>
+    <!-- mian-content -->
+    <div class="main-content" id="home">
+        <!-- header -->
+        <header class="header">
+            <div class="container">
+                <!-- nav -->
+                <nav class="py-3">
+                    <div id="logo">
+                        <h1> <a class="navbar-brand" href="/">Travel blog</a>
+                        </h1>
+                    </div>
+
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop" />
+                    <ul class="menu mt-2">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="{% url 'blog:about' %}">About</a></li>
+                        <li>
+                            <!-- First Tier Drop Down -->
+                            <label for="drop-2" class="toggle">Drop Down <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                            <a href="#">More Info <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2" />
+                            <ul>
+                                <li><a href="{% static 'features.html' %}">Map of a restaurant</a>
+                                </li>
+                                <li><a href="{% static 'gallery.html' %}">Map of famous places</a>
+                                </li>
+                                <li><a href="{% static 'features.html' %}">Services</a>
+                                </li>
+                            </ul>
+                        </li>
+<!--                        <li><a href="static/contact.html">Signup</a>-->
+                        {% if user.is_authenticated %}
+                            <li>
+                                <a href="#">Profile</a>
+                                <a href="{% url 'logout' %}">Logout</a>
+                            </li>
+                        {% endif %}
+                        {% if not user.is_authenticated %}
+                            <li>
+                                <a href="{% url 'login' %}?next={{ request.path }}">Login</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'signup' %}">Signup</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                <!-- //nav -->
+            </div>
+        </header>
+        <!-- //header -->
+
+        {% block content %}
+
+        {% endblock %}
+    </div>
+        <!--footer -->
+        <footer>
+            <div class="footer_1its py-5">
+                <div class="container py-md-4">
+
+                    <div class="row footer-top mb-md-5 mb-4">
+                        <div class="col-lg-4 col-md-6 footer-grid_section_1its" data-aos="fade-right">
+                            <div class="footer-title-w3pvt">
+                                <h3>Address</h3>
+                            </div>
+                            <div class="footer-text">
+                                <p>Address : Republic of Korea, Seoul, Seongsu-dong</p>
+                                <p>Phone : -</p>
+                                <p>Email : <a href="mailto:conficker77@gmail.com">conficker77@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-md-0 mt-4 footer-grid_section_1its">
+                            <div class="footer-title-w3pvt">
+                                <h3>Quick Links</h3>
+                            </div>
+                             <div class="row no-gutters">
+                                <ul class="links">
+                                    <li><a href="/">Home </a></li>
+                                    <li><a href="{% url 'blog:about' %}">About </a></li>
+                                    <li><a href="static/features.html">Services</a></li>
+
+                                    <li><a href="static/gallery.html">Gallery</a></li>
+                                    <li><a href="{% url 'signup' %}">Signup </a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 mt-lg-0 mt-4 col-sm-12 footer-grid_section_1its" data-aos="fade-left">
+                            <div class="footer-title-w3pvt">
+                                <h3>Newsletter</h3>
+                            </div>
+                            <div class="footer-text">
+                                <p>By using our travel blog you will always get memories of your trip from us.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+        <!-- copyright -->
+        <div class="cpy-right py-3">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-md-8">
+                        <p class="copy-w3layouts">© 2019 Camping. Project by
+                            <a href="http://w3layouts.com">SeungHyeonTak.</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 footer-grid_section">
+                        <ul class="top-right-info">
+                            <li class="mr-1">
+                                <a href="https://www.facebook.com/SeungHyeonTak">
+                                        <span class="fa fa-facebook-f"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/SeungHyeonTak">
+                                        <span class="fa fa-github"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- //copyright -->
+</body>
+</html>
