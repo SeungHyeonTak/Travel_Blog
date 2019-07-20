@@ -1,7 +1,9 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from .forms import *
 from django.conf import settings
+from django.contrib.auth import authenticate, login
 
 
 def signup(request):
@@ -18,3 +20,5 @@ def signup(request):
     return render(request, 'accounts/signup.html', {
         'form': form
     })
+
+
