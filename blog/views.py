@@ -8,5 +8,10 @@ def main_list(request):
 def about(request):
     return render(request, 'blog/about.html')
 
+
 def restaurant(request):
     return render(request, 'blog/map_restaurant.html')
+
+
+def hotplace(request):
+    return render(request, 'blog/map_hotplace.html')
