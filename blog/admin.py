@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+
+@admin.register(About)
+class AboutAdmin(admin.ModelAdmin):
+    list_display = ['id', 'title', 'user']
+    list_display_links = ['title']
