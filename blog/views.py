@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import About
 from .forms import AboutForm
 from django.contrib.auth.decorators import login_required
+from secret import *
 
 
 def main_list(request):
@@ -59,8 +60,12 @@ def comment_new(request, about_pk):
 
 
 def restaurant(request):
-    return render(request, 'blog/map_restaurant.html')
+    return render(request, 'blog/map_restaurant.html', {
+        'naver_api': naver_api,
+    })
 
 
 def hotplace(request):
-    return render(request, 'blog/map_hotplace.html')
+    return render(request, 'blog/map_hotplace.html', {
+        'naver_api': naver_api,
+    })
