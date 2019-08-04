@@ -37,8 +37,25 @@ def about_detail(request, pk):
         'about_details': about_details,
     })
 
-def content_edit(request):
 
+# @login_required
+def comment_new(request, about_pk):
+    abouts = get_object_or_404(About, pk=about_pk)
+
+    if request.method == "POST":
+        form = AboutForm(request.POST, request.FILES)
+        if form.is_valid():
+            qs = form.save(commit=False)
+            qs.about = about
+            qs.author = request.uesr
+            qs.save()
+            return redirect('blog:about_detail', about.pk)
+    else:
+        form = AboutForm()
+
+    return render(request, 'blog/about_new.html', {
+        'form': form
+    })
 
 
 def restaurant(request):
@@ -47,4 +64,3 @@ def restaurant(request):
 
 def hotplace(request):
     return render(request, 'blog/map_hotplace.html')
-
