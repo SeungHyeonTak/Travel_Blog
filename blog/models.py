@@ -13,13 +13,13 @@ def min_length_3_valudator(value):
 
 
 class About(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='About') # 사용자
-    title = models.CharField(max_length=50, validators=[min_length_3_valudator]) # 제목
-    content = models.TextField(blank=True) # 내용
-    photo = models.ImageField(blank=True, upload_to='blog/image/%Y/%m/%d') # 사진
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='About')  # 사용자
+    title = models.CharField(max_length=50, validators=[min_length_3_valudator])  # 제목
+    content = models.TextField(blank=True)  # 내용
+    photo = models.ImageField(blank=True, upload_to='blog/image/%Y/%m/%d')  # 사진
     post_hit = models.PositiveIntegerField(default=0)
-    created = models.DateTimeField(auto_now_add=True) # 작성 날짜
-    updated = models.DateTimeField(auto_now=True) # 수정 날짜
+    created = models.DateTimeField(auto_now_add=True)  # 작성 날짜
+    updated = models.DateTimeField(auto_now=True)  # 수정 날짜
 
     class Meta:
         ordering = ['-id']
@@ -34,6 +34,7 @@ class About(models.Model):
 
     # def get_absolute_url(self):
     #     return reversed('')
+
 
 # 게시글 조회 기록 저장
 # class HitCount(models.Model):

@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f4b669d-fd56-48c4-89fe-15961b700751" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/about_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/about_update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/map_hotplace.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/map_hotplace.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/about_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/about_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/comment_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/comment_delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/map_restaurant.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/map_restaurant.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,72 +26,32 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>abou</find>
-      <find>about</find>
-      <find>ho</find>
-      <find>content</find>
-      <find>main-content</find>
-      <find>home</find>
-      <find>Explore The</find>
-      <find>image</find>
-      <find>.main</find>
-      <find>main</find>
-      <find>Or</find>
-      <find>MARKER_SPRITE_POSITION</find>
-      <find>src</find>
-      <find>sign</find>
-      <find>label</find>
-      <find>form</find>
-      <find>signup</find>
-      <find>login</find>
-      <find>user</find>
-      <find>admin</find>
-      <find>our tr</find>
-      <find>Explor</find>
-      <find>Sit</find>
-      <find>Let</find>
-      <find>A rec</find>
-      <find>btn</find>
-      <find>Read</find>
-      <find>read Mo</find>
-      <find>gal</find>
-      <find>Plan you</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="925" />
-    <option name="width" value="1533" />
-    <option name="height" value="875" />
   </component>
   <component name="ProjectId" id="1OxAsB2XHH0uEobepAyzOs1XPQ3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/바탕화면/board_project/board_project" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$/accounts/templates/accounts" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
   <component name="RunDashboard">
