@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f4b669d-fd56-48c4-89fe-15961b700751" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blog/templates/blog/about_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/templates/blog/about_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/comment_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/comment_single.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/comment_update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untitled.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/about_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/about_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/about_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/about_new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/about_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/about_update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/comment_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/comment_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/comment_edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/comment_new.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/map_hotplace.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/map_hotplace.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/map_restaurant.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/map_restaurant.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
@@ -39,19 +45,20 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/바탕화면/board_project/board_project" />
+    <property name="last_opened_file_path" value="$USER_HOME$/바탕화면/backend_yanolja" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/blog/templates/blog/comment" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/static" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/blog/templates/blog" />
+      <recent name="$PROJECT_DIR$/blog/templates/blog/comment" />
       <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$/accounts/templates/accounts" />
       <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">

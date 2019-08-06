@@ -15,6 +15,8 @@ def min_length_3_valudator(value):
 class About(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='About')  # 사용자
     title = models.CharField(max_length=50, validators=[min_length_3_valudator])  # 제목
+    country = models.CharField(max_length=50, help_text='국가를 입력하세요')# 나라
+    city = models.CharField(max_length=50, help_text='도시를 입력하세요')# 도시
     content = models.TextField(blank=True)  # 내용
     photo = models.ImageField(blank=True, upload_to='blog/image/%Y/%m/%d')  # 사진
     post_hit = models.PositiveIntegerField(default=0)
@@ -27,10 +29,13 @@ class About(models.Model):
     def __str__(self):
         return self.title
 
-    @property
-    def update_counter(self):
-        self.post_hit = self.post_hit + 1
-        self.save()
+    def get_absolute_url(self):
+        return reverse('blog:about_detail', args=[self.id])
+
+    # @property
+    # def update_counter(self):
+    #     self.post_hit = self.post_hit + 1
+    #     self.save()
 
     # def get_absolute_url(self):
     #     return reversed('')
@@ -43,17 +48,20 @@ class About(models.Model):
 #     date = models.DateTimeField(default=timezone.now(), null=True, blank=True) # 조회수가 올라갔던 날짜
 
 class Comment(models.Model):
-    about = models.ForeignKey(About, on_delete=models.CASCADE, related_name='c_about')
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
-    message = models.TimeField()
+    about = models.ForeignKey(About, on_delete=models.CASCADE, related_name='comments')
+    author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='comments')
+    text = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.message
+        return (self.author.username if self.author else "무명") + "의 댓글"
 
-    def get_edit_url(self):
-        return reverse('blog:comment_edit', args=[self.about.pk, self.pk])
+    class Meta:
+        ordering = ['-id']
 
-    def get_delete_url(self):
-        return reverse('blog:comment_delete', args=[self.about.pk, self.pk])
+    # def get_edit_url(self):
+    #     return reverse('blog:comment_edit', args=[self.about.pk, self.pk])
+    #
+    # def get_delete_url(self):
+    #     return reverse('blog:comment_delete', args=[self.about.pk, self.pk])
