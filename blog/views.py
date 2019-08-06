@@ -1,27 +1,43 @@
+import math
+import json
 from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import About, Comment
+from .models import *
 from .forms import AboutForm, CommentForm
 from django.contrib.auth.decorators import login_required
 from secret import *
 from django.contrib.auth import get_user_model
 from django.http import JsonResponse
-import json
 from django.template.loader import render_to_string
+from hitcount.views import HitCountDetailView
 
 User = get_user_model()
 
 
+class PostCountHitDetailView(HitCountDetailView):
+    model = Post_count
+    count_hit = True
+
+
 def main_list(request):
-    page = int(request.GET.get('page',1)) # page 부분 세팅 하기
     return render(request, 'blog/main.html')
 
 
 def about(request):
     abouts = About.objects.all()
+    page = int(request.GET.get('page', 1))  # page 부분 세팅 하기
+    paginated_by = 6
+    total_count = len(abouts)
+    total_page = math.ceil(total_count / paginated_by)
+    page_range = range(1, total_page + 1)
+    start_index = paginated_by * (page - 1)
+    end_index = paginated_by * page
+    abouts = abouts[start_index:end_index]
     return render(request, 'blog/about.html', {
         'abouts': abouts,
+        'total_page': total_page,
+        'page_range': page_range,
     })
 
 
