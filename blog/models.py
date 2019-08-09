@@ -56,8 +56,11 @@ class Comment(models.Model):
     class Meta:
         ordering = ['-id']
 
-    # def get_edit_url(self):
-    #     return reverse('blog:comment_edit', args=[self.about.pk, self.pk])
-    #
-    # def get_delete_url(self):
-    #     return reverse('blog:comment_delete', args=[self.about.pk, self.pk])
+
+# 맛집&명소 list model
+class Maplocation(models.Model):
+    placename = models.CharField(max_length=50)
+    address = models.CharField(max_length=50, blank=True)
+    phonenumber = models.CharField(max_length=20, blank=True)
+    lat = models.CharField(max_length=50)
+    lng = models.CharField(max_length=50)

@@ -1,5 +1,7 @@
 import math
 import json
+import googlemaps
+import folium
 from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
@@ -165,11 +167,14 @@ def comment_delete(request, comment_pk):
 
 
 def restaurant(request):
+    res_list = Maplocation.objects.all()
     with open('loca.json', 'rt', encoding='utf8') as f:
         json_string = f.read()
         res = json.loads(json_string)
+
     return render(request, 'blog/map_restaurant.html', {
         'naver_api': naver_api,
+        'res_list': res_list,
         'res': res,
     })
 
