@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts',
     'django_extensions',
     'hitcount',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -127,10 +128,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 # STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static')
-# ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 #
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -140,7 +141,7 @@ LOGIN_URL = '/'
 AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY_ID_TSH
 AWS_SECRET_ACCESS_KEY = AWS_SECRET_ACCESS_KEY_TSH
 AWS_REGION = 'ap-northeast-2'
-AWS_STORAGE_BUCKET_NAME = 'media.travelbackend.online'
+AWS_STORAGE_BUCKET_NAME = 'static.travelbackend.online'
 AWS_S3_CUSTOM_DOMAIN = 's3.%s.amazonaws.com/%s' % (AWS_REGION, AWS_STORAGE_BUCKET_NAME)
 # Route 53 연결 시, AWS_S3_CUSTOM_DOMAIN 수정
 # AWS_S3_CUSTOM_DOMAIN = '%s' AWS_STORAGE_BUCKET_NAME
